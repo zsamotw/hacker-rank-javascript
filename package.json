@@ -1,0 +1,17 @@
+{
+  "name": "learn-ground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^24.9.0",
+    "partial.lenses": "^14.17.0",
+    "ramda": "^0.26.1",
+    "sanctuary": "^2.0.0"
+  }
+}
