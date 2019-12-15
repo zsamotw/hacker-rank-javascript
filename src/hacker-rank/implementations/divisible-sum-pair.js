@@ -7,3 +7,5 @@ function divisibleSumPairs(n, k, ar) {
     )
     .filter(el => !!el).length
 }
+
+module.exports = divisibleSumPairs

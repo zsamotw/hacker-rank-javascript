@@ -14,4 +14,4 @@ const plusMinus = arr => {
   return arr.reduce((acc, el) => helper(acc, el), [0, 0, 0])
 }
 
-module.exports = plusMinus
+module.exports =  plusMinus

@@ -12,3 +12,5 @@ function birthday(s, d, m) {
 
   return helper(s, d, m, 0)
 }
+
+module.exports = birthday

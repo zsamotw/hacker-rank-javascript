@@ -10,7 +10,7 @@ function hasFactor(arr, el) {
   return arr.every(a => el % a === 0)
 }
 
-function getTotalX(a, b) {
+export function getTotalX(a, b) {
   a.sort()
   b.sort()
   const start = a[a.length - 1]
@@ -18,7 +18,7 @@ function getTotalX(a, b) {
   const count = end - start + 1
 
   let result = []
-  for (i of range(start, count)) {
+  for (let i of range(start, count)) {
     if (hasFactor(a, i) && isFactor(b, i)) {
       result.push(i)
     }
@@ -26,3 +26,5 @@ function getTotalX(a, b) {
 
   return result.length
 }
+
+module.exports = range

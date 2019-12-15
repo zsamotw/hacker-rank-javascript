@@ -8,3 +8,5 @@ function kangaroo(x1, v1, x2, v2) {
     return dist % (v1 - v2) === 0
   }
 }
+
+module.exports = kangaroo

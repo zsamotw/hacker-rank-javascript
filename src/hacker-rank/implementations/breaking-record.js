@@ -11,9 +11,11 @@ function breakingRecords(scores) {
       return acc
     }
   }
-  const [min, max, minCount, maxCount] = scores.reduce(
+  const [, , minCount, maxCount] = scores.reduce(
     (acc, el) => records(acc, el),
     [undefined, undefined, 0, 0]
   )
   return [maxCount, minCount]
 }
+
+module.exports = breakingRecords 

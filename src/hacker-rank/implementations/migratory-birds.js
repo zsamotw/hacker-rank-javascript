@@ -4,8 +4,11 @@ function migratoryBirds(arr) {
     acc[el] = value
     return acc
   }, {})
+  const birdsCountIndex = 1
   return Object.entries(birdDictionary)
-    .sort((a, b) => b[1] - a[1])
+    .sort((a, b) => b[birdsCountIndex] - a[birdsCountIndex])
     .shift()
     .shift()
 }
+
+module.exports = migratoryBirds

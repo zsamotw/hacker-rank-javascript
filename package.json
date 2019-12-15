@@ -9,9 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jest": "^24.9.0",
-    "partial.lenses": "^14.17.0",
-    "ramda": "^0.26.1",
-    "sanctuary": "^2.0.0"
+    "jest": "^24.9.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2"
   }
 }

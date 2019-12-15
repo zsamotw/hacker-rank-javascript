@@ -1,6 +1,7 @@
 const helper = (n, max) => {
   if (n <= max) {
-    for (let x of Array(n - 1)) {
+    // eslint-disable-next-line no-unused-vars
+    for (let _x of Array(n - 1)) {
       process.stdout.write('#')
     }
     process.stdout.write('#\n')

@@ -1,4 +1,4 @@
-function diagonalDifference(arr) {
+export function diagonalDifference(arr) {
   const data = arr.reduce(
     (acc, el) => {
       const [left, right, indexL, indexR] = acc
@@ -11,3 +11,5 @@ function diagonalDifference(arr) {
 
   return Math.abs(data[1] - data[0])
 }
+
+module.exports = diagonalDifference
