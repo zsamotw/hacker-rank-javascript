@@ -5,8 +5,8 @@ function getMonySpent(keyboards, drives, b) {
     const newLessThenBudget = drivesFitCondition.map(driver => driver + keyboard)
     return [[...lessThenBudget, ...newLessThenBudget], drivesFitCondition]
   }, [[], drives])
-
-  return result
+  const [ moneySpent, ] = result
+  return moneySpent
 }
 
 module.exports = getMonySpent
