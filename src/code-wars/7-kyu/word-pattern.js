@@ -1,11 +1,14 @@
 function wordPattern(word) {
-  const helper = (acc, char) => {
+  const helper = (acc, el) => {
     const { index, dictionary, result } = acc
+    const char = el.toLowerCase()
     const isInDict = dictionary[char] !== undefined
     const charCode = isInDict ? dictionary[char] : index
 
     const nextResult = [...result, charCode]
-    const nextDictionary = isInDict ? dictionary : { ...dictionary, [char]: charCode }
+    const nextDictionary = isInDict
+      ? dictionary
+      : { ...dictionary, [char]: charCode }
     const nextIndex = isInDict ? index : index + 1
     return { index: nextIndex, dictionary: nextDictionary, result: nextResult }
   }
