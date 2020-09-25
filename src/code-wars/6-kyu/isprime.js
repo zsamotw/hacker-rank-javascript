@@ -6,8 +6,8 @@ function isPrime(num) {
     }
   }
 
-  if (num <= 2) return false
-  else return helper(num, 3)
+  if (num <= 1) return false
+  else return helper(num, 2)
 }
 
 module.exports = isPrime
