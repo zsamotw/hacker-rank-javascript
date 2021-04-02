@@ -1,31 +1,13 @@
-function queueTime(queue, tills) {
-  function makeTills(tills) {
-    const keys = [...Array(tills).keys()]
-    return keys.reduce((result, key) => {
-      return { ...result, [key]: [] }
-    }, {})
+function queueTime(queue, tillsNumber) {
+  function makeTills(tillsNumber) {
+    return Array(tillsNumber).fill(0)
   }
 
-  function handle(tills, customer) {
-    const [key] = Object.entries(tills).reduce(
-      ([minKey, minValue], [key, till]) => {
-        const value = till.reduce((acc, el) => acc + el, 0)
-        if (value <= minValue) {
-          return [key, value]
-        } else {
-          return [minKey, minValue]
-        }
-      }
-    )
-    tills[key] = [...tills[key], ...[customer]]
-    return tills
+  function handleCustomer(tills, customer) {
+    const [head, ...rest] = tills.sort()
+    return [...[head + customer], ...rest]
   }
-
-  return Math.max(
-    ...Object.values(queue.reduce(handle, makeTills(tills))).map(arr =>
-      arr.reduce((acc, el) => el + acc, 0)
-    )
-  )
+  return Math.max(...queue.reduce(handleCustomer, makeTills(tillsNumber)))
 }
 
 module.exports = queueTime
