@@ -4,7 +4,7 @@ function queueTime(queue, tillsNumber) {
   }
 
   function handleCustomer(tills, customer) {
-    const [head, ...rest] = tills.sort()
+    const [head, ...rest] = tills.sort((a, b) => a - b)
     return [...[head + customer], ...rest]
   }
   return Math.max(...queue.reduce(handleCustomer, makeTills(tillsNumber)))
